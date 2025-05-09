@@ -1,7 +1,17 @@
 namespace BeerSender.Domain.Boxes;
-public class Box
+public class Box : AggregateRoot
 {
+  public void Apply(BoxCreated @event)
+  {
+    Capacity = @event.Capacity;
+  }
 
+  public void Apply(ShippingLabelAdded @event)
+  {
+    ShippingLabel = @event.Label;
+  }
+  public BoxCapacity? Capacity { get; private set; }
+  public ShippingLabel? ShippingLabel { get; private set; }
 }
 
 // Commands
@@ -25,7 +35,7 @@ public record ShippingLabelFailedToAdd(ShippingLabelFailedToAdd.FailReason Reaso
   }
 };
 
-public record BoxCreated(int NumberOfSpots);
+public record BoxCreated(BoxCapacity Capacity);
 
 // -----------------------------------------------
 public record ShippingLabel(Carrier Carrier, string TrackingCode)
