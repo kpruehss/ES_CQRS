@@ -1,0 +1,77 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# .NET Core
+*.db
+*.log
+*.deps.json
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+
+# VS Code settings
+.vscode/
+.history/
+
+# Rider/JetBrains IDEs
+.idea/
+
+# Others
+*.tmp
+*.temp
+*.bak
+*.ncb
+*.cache
+*.pidb
+*.svclog
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+
+# Dotnet publish outputs
+publish/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+# Avoid ignoring packages if you have a packages.config file in use
+!**/packages.config
+
+# Logs
+*.log
+
+# Local database
+*.mdf
+*.ldf
+
+# Secrets
+secrets.json
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Others
+*.vspscc
+*.vssscc
+
