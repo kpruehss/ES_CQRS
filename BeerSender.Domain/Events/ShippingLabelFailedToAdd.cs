@@ -1,4 +1,4 @@
-﻿namespace BeerSender.Domain.Boxes;
+﻿namespace BeerSender.Domain.Events;
 
 public record ShippingLabelFailedToAdd(ShippingLabelFailedToAdd.FailReason Reason)
 {

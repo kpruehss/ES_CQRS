@@ -1,4 +1,4 @@
-﻿namespace BeerSender.Domain.Boxes;
+﻿namespace BeerSender.Domain.Model;
 
 public record BoxCapacity(int NumberOfSpots)
 {

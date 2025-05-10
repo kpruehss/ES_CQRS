@@ -1,4 +1,7 @@
-namespace BeerSender.Domain.Boxes;
+using BeerSender.Domain.Boxes;
+using BeerSender.Domain.Events;
+
+namespace BeerSender.Domain.Model;
 public class Box : AggregateRoot
 {
   public void Apply(BoxCreated @event)

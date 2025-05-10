@@ -1,10 +1,13 @@
-﻿namespace BeerSender.Domain.Boxes.Commands;
+﻿using BeerSender.Domain.Events;
+using BeerSender.Domain.Model;
+
+namespace BeerSender.Domain.Boxes.Commands;
 
 public record AddShippingLabel(
     Guid BoxId,
     ShippingLabel Label);
 
-public class AddShippingLabelHandler(IEventStore eventStore) : CommandHandler<AddShippingLabel>
+public class AddShippingLabelHandler(IEventStore eventStore) : CommandHandler<AddShippingLabel>(eventStore)
 {
 
     public override void Handle(AddShippingLabel command)
